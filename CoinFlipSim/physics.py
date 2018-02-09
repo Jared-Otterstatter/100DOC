@@ -1,3 +1,4 @@
+import turtle
 def main():
     c1 = Coin(1,2)
     print(c1)
@@ -25,6 +26,10 @@ class Coin:
     def getMass(self):
         return self.mass
 
+    def drawCoin(self,t):
+        t.pu()
+        t.goto(self.pos.getX())
+
 class Vector:
     def __init__(self, x, y):
         self.x = x
@@ -38,5 +43,12 @@ class Vector:
     def scale(self, scaler):
         self.x *=scaler
         self.y *=scaler
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
 
 if __name__ == "__main__": main()
